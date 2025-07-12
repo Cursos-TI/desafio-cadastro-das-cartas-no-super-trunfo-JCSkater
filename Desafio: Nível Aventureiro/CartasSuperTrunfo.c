@@ -3,12 +3,12 @@
 int main(){
     // declaração dos tipos de variáveis que serão utilizadas e seus respectivos nomes para carta 01.
     char estado1, codigo_carta1[4], nome_cidade1[20];
-    float area1, produto_interno_bruto1;
+    float area1, produto_interno_bruto1, densidade_populacional1, pib_per_capita1;
     int pontos_turisticos1, populacao1;
 
     // declaração dos tipos de variáveis que serão utilizadas e seus respectivos nomes para carta 02.
     char estado2, codigo_carta2[4], nome_cidade2[20];
-    float area2, produto_interno_bruto2;
+    float area2, produto_interno_bruto2, densidade_populacional2, pib_per_capita2;
     int pontos_turisticos2, populacao2;
 
     // Titulo do App
@@ -16,7 +16,7 @@ int main(){
     printf("* Cadastro de Cartas - SuperTrunfo *\n");
     printf("************************************\n");
 
-    // o trecho abaixo recebe as entradas do usuário para a carta 01 e as armazena nas variáveis.
+    // recebe as entradas do usuário para a carta 01 e as armazena nas variáveis.
     printf("Carta 01\n");
 
     printf("Digite a letra do Estado (Letras entre A e H): \n"); // printa mensagem no terminal
@@ -27,7 +27,7 @@ int main(){
 
     printf("Digite o nome da cidade: \n");
     scanf("%s", nome_cidade1);
-
+ 
     printf("Digite o número de habitantes da cidade: \n");
     scanf("%d", &populacao1);
 
@@ -39,10 +39,16 @@ int main(){
 
     printf("Digite a quantidade de pontos turisticos da cidade: \n");
     scanf("%d", &pontos_turisticos1);
-    
+
+    // calcula a densidade populacional da carta 1
+    densidade_populacional1 = populacao1 / area1;
+
+    // calcula o pib per capita da carta 1
+    pib_per_capita1 = produto_interno_bruto1 / populacao1;
+
     printf("\n");
 
-    // o trecho abaixo recebe os inputs do usuário para a carta 02 e as armazena nas variáveis.
+    // recebe os inputs do usuário para a carta 02 e as armazena nas variáveis.
     printf("Carta 02\n");
 
     printf("Digite a letra do Estado (Letras entre A e H): \n");
@@ -66,6 +72,12 @@ int main(){
     printf("Digite a quantidade de pontos turisticos da cidade: \n");
     scanf("%d", &pontos_turisticos2);
 
+    // calcula a densidade populacional da carta 2
+    densidade_populacional2 = populacao2 / area2;
+
+    // calcula o pib per capita da carta 2
+    pib_per_capita2 = produto_interno_bruto2 / populacao2;
+
     //imprime no terminal o resutado de tudo que foi inputado pelo usuário no cadastro da carta 01
     printf("\n");
     printf("************************************\n");
@@ -77,9 +89,11 @@ int main(){
     printf("Código: %s \n", codigo_carta1);
     printf("Nome da Cidade: %s \n", nome_cidade1);
     printf("População: %d \n", populacao1);
-    printf("Área: %.2f \n", area1);
-    printf("PIB: %.2f \n", produto_interno_bruto1);
-    printf("Nº de pontos turísticos: %d \n", pontos_turisticos1);
+    printf("Área: %.2f km²\n", area1);
+    printf("PIB: %.2f bilhões de reais\n", produto_interno_bruto1);
+    printf("Número de pontos turísticos: %d \n", pontos_turisticos1);
+    printf("Densidade Populacional: %.2f hab/km²\n", densidade_populacional1);
+    printf("PIB per capita: %.2f reais\n", pib_per_capita1);
 
     //imprime no terminal o resutado de tudo que foi inputado pelo usuário no cadastro da carta 02
     printf("\n");
@@ -88,13 +102,11 @@ int main(){
     printf("Código: %s \n", codigo_carta2);
     printf("Nome da Cidade: %s \n", nome_cidade2);
     printf("População: %d \n", populacao2);
-    printf("Área: %.2f \n", area2);
-    printf("PIB: %.2f \n", produto_interno_bruto2);
-    printf("Nº de pontos turísticos: %d \n", pontos_turisticos2);
-
-    printf("\n");
-    printf("Fim do Programa.");
-    printf("\n");
-    // encerra o App com sucesso.
+    printf("Área: %.2f km²\n", area2);
+    printf("PIB: %.2f bilhões de reais\n", produto_interno_bruto2);
+    printf("Número de pontos turísticos: %d \n", pontos_turisticos2);
+    printf("Densidade Populacional: %.2f hab/km²\n", densidade_populacional2);
+    printf("PIB per capita: %.2f reais\n", pib_per_capita2);
+    
     return 0;
 }
