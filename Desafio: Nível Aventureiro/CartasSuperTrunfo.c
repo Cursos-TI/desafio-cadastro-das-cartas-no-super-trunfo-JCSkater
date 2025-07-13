@@ -44,7 +44,7 @@ int main(){
     densidade_populacional1 = populacao1 / area1;
 
     // calcula o pib per capita da carta 1
-    pib_per_capita1 = produto_interno_bruto1 / populacao1;
+    pib_per_capita1 = (produto_interno_bruto1 * 1000000000) / populacao1;
 
     printf("\n");
 
@@ -76,7 +76,7 @@ int main(){
     densidade_populacional2 = populacao2 / area2;
 
     // calcula o pib per capita da carta 2
-    pib_per_capita2 = produto_interno_bruto2 / populacao2;
+    pib_per_capita2 = (produto_interno_bruto2 * 1000000000) / populacao2;
 
     //imprime no terminal o resutado de tudo que foi inputado pelo usuário no cadastro da carta 01
     printf("\n");
