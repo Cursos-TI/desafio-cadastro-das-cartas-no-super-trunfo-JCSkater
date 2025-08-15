@@ -4,12 +4,14 @@ int main(){
     // declaração dos tipos de variáveis que serão utilizadas e seus respectivos nomes para carta 01.
     char estado1, codigo_carta1[4], nome_cidade1[20];
     float area1, produto_interno_bruto1, densidade_populacional1, pib_per_capita1;
-    int pontos_turisticos1, populacao1;
+    int pontos_turisticos1;
+    unsigned long int populacao1;
 
     // declaração dos tipos de variáveis que serão utilizadas e seus respectivos nomes para carta 02.
     char estado2, codigo_carta2[4], nome_cidade2[20];
     float area2, produto_interno_bruto2, densidade_populacional2, pib_per_capita2;
-    int pontos_turisticos2, populacao2;
+    int pontos_turisticos2;
+    unsigned long int populacao2;
 
     // Titulo do App
     printf("************************************\n");
