@@ -19,7 +19,7 @@ int main(){
     // recebe as entradas do usuário para a carta 01 e as armazena nas variáveis.
     printf("Carta 01\n");
 
-    printf("Digite a letra do Estado (Letras entre A e H): \n"); // printa mensagem no terminal
+    printf("Digite o Estado (Letras entre A e H): \n"); // printa mensagem no terminal
     scanf(" %c", &estado1); // input do usuário
 
     printf("Digite o código da carta (Letra do Estado + Nº sequencial de 01 a 04): \n");
